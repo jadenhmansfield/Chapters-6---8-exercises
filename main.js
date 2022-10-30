@@ -1,4 +1,5 @@
 //Chapter 6
+
 //Adding character experience
 
 function chapter61(){
@@ -27,9 +28,109 @@ function chapter61(){
   
 //Modeling a bank account
 
+function chapter62(){
+    const account = {
+        owner: "Alex",
+        balance: 0,
 
-//A name property set to "Alex".
-//A balance property set to 0.
-//A credit method adding the (positive or negative) value passed as an argument to the account balance.
-//A describe method returning the account description.
-//Use this object to show its description, crediting 250, debiting 80, then show its description again.
+    credit(amount) {
+        this.balance += amount;
+    },
+    
+    describe() {
+      return `owner: ${this.name}, balance ${this.balance}`;
+    }
+};
+    
+    console.log(account.describe());
+    alert(account.describe());
+    account.credit(250);
+    account.credit(-80);
+    console.log(account.describe());
+    alert(account.describe());
+}
+
+//Chapter 7
+
+//Musketeers
+
+function chapter71(){
+    const musketeers = ["Athos", "Porthos", "Aramis"];
+
+    console.log("Here are the three musketeers:");
+    alert("Here are the three musketeers:");
+    for (let i = 0; i < musketeers.length; i++) {
+    console.log(musketeers[i]);
+    alert(musketeers[i]);
+    }
+
+    musketeers.push("D'Artagnan");
+    console.log("another musketeer has been added")
+    alert("another musketeer has been added")
+
+    musketeers.forEach(musketeer => {
+        console.log(musketeer);
+        alert(musketeer);
+      });
+
+      musketeers.splice(2, 1);
+    console.log("Aramis has been removed");
+    alert("Aramis has been removed");
+
+    for (const musketeer of musketeers) {
+    console.log(musketeer);
+    alert(musketeer);
+}
+}
+
+//Sum of values
+
+function chapter72(){
+    const values = [3, 11, 7, 2, 9, 10];
+    let sum = 0;
+
+    values.forEach(value => {
+        sum += value;
+    });
+
+    console.log(sum);
+    alert(sum);
+}
+
+//Chapter 8
+
+//Word Info
+
+function chapter81(){
+    let input = prompt("Enter any word:");
+    console.log(input.length);
+    alert(input.length);
+    console.log(`Its lowercase value is ${input.toLowerCase()}`);
+    alert(`Its lowercase value is ${input.toLowerCase()}`);
+    console.log(`Its uppercase value is ${input.toUpperCase()}`);
+    alert(`Its uppercase value is ${input.toUpperCase()}`);
+}
+
+//Vowel Count
+
+function chapter82(){
+    let input = prompt("Enter any word:");
+    let vowelCount = 0;
+
+    [...input].forEach(letter => {
+        const lowerLetter = letter.toLowerCase();
+            if (
+                lowerLetter === "a" ||
+                lowerLetter === "e" ||
+                lowerLetter === "i" ||
+                lowerLetter === "o" ||
+                lowerLetter === "u" ||
+                lowerLetter === "y"
+            ) {
+            vowelCount++;
+            }
+    }
+    );
+console.log(vowelCount);
+alert(vowelCount);
+}
