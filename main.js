@@ -1,3 +1,30 @@
+//in-class
+
+//Modeling a bank account
+
+function inclass(){
+    const account = {
+        owner: "Alex",
+        balance: 0,
+
+    credit(amount) {
+        this.balance += amount;
+    },
+    
+    describe() {
+      return `owner: ${this.name}, balance ${this.balance}`;
+    }
+};
+    
+    console.log(account.describe());
+    alert(account.describe());
+    account.credit(250);
+    account.credit(-80);
+    console.log(account.describe());
+    alert(account.describe());
+}
+
+
 //Chapter 6
 
 //Adding character experience
@@ -26,29 +53,27 @@ function chapter61(){
 }
 
   
-//Modeling a bank account
+//Modeling a dog
 
 function chapter62(){
-    const account = {
-        owner: "Alex",
-        balance: 0,
+    const dog = {
+        name:"Fang",
+        species:"boarhound",
+        size:75,
+    
 
-    credit(amount) {
-        this.balance += amount;
-    },
-    
-    describe() {
-      return `owner: ${this.name}, balance ${this.balance}`;
-    }
-};
-    
-    console.log(account.describe());
-    alert(account.describe());
-    account.credit(250);
-    account.credit(-80);
-    console.log(account.describe());
-    alert(account.describe());
+    bark() {
+        return "Grrr! Grrr!";
+        }
+    };
+
+    console.log(`${dog.name} is a ${dog.species} dog measuring ${dog.size}`);
+    alert(`${dog.name} is a ${dog.species} dog measuring ${dog.size}`);
+    console.log(`Look, a cat! ${dog.name} barks: ${dog.bark()}`);
+    alert(`Look, a cat! ${dog.name} barks: ${dog.bark()}`);
 }
+
+
 
 //Chapter 7
 
